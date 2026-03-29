@@ -1,0 +1,2 @@
+instance-id: alpine-autoscale
+local-hostname: alpine-vm

@@ -1,0 +1,22 @@
+#cloud-config
+hostname: alpine-vm
+users:
+  - name: root
+    lock_passwd: false
+    passwd: $6$rounds=4096$randomsalt$xyz123
+    shell: /bin/bash
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC7... root@localhost
+chpasswd:
+  list: |
+    root:alpine
+  expire: false
+packages:
+  - python3
+  - python3-pip
+  - openssh-server
+  - curl
+runcmd:
+  - systemctl enable ssh
+  - systemctl start ssh
+  - echo "Auto-scaling VM ready" > /root/ready.txt

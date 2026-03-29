@@ -1,0 +1,20 @@
+# Large binary files
+*.iso
+*.qcow2
+*.img
+*.aria2
+
+# LaTeX build artifacts
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+
+# Runtime state & logs
+logs/
+config/monitor_state.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

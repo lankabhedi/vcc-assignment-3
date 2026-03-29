@@ -1,0 +1,36 @@
+Assignment 3: Create a Local VM and Auto-Scale It to Any Public Cloud Platform When Resource Usage Exceeds 75% in Local VM
+========================================================================================================
+
+Course: CSL7510 VCC - Jan 2026
+Instructor: Sumit Kalra
+Due Date: 11:59 PM
+Points: 50
+
+OBJECTIVE:
+----------
+Create a local VM and implement a mechanism to monitor resource usage. Configure it to auto-scale 
+to a public cloud (e.g., GCP, AWS, or Azure) when resource usage exceeds 75%.
+
+DELIVERABLES:
+-------------
+
+1. Document Report:
+   - Step-by-Step Instructions for Implementation:
+     * Creation of a local VM (using VirtualBox, VMware, or similar)
+     * Implementation of resource monitoring (using tools like Prometheus, Grafana, or a custom script)
+     * Configuration of cloud auto-scaling policies and resource migration
+     * Deployment of a sample application to demonstrate the process
+
+2. Architecture Design:
+   - Diagram illustrating the flow: local VM resource monitoring → scaling to cloud → deployment
+
+3. Link to Source Code Repo:
+   - Repository containing monitoring scripts, deployment configurations, and application code
+
+4. Link to Recorded Video Demo:
+   - A video showing the setup, resource monitoring, and auto-scaling process in action, 
+     with a detailed voice-over
+
+PLAGIARISM CLAUSE:
+------------------
+A declaration that no part of the implementation or documentation should be copied from other sources.

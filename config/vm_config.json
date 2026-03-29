@@ -1,0 +1,29 @@
+{
+  "monitor": {
+    "cpu_threshold": 75.0,
+    "ram_threshold": 75.0,
+    "check_interval": 5,
+    "consecutive_triggers": 3,
+    "cooldown_period": 300,
+    "log_file": "monitor.log",
+    "state_file": "monitor_state.json"
+  },
+  "gcp": {
+    "project": "vm-scaling-assignment",
+    "region": "us-central1",
+    "zone": "us-central1-a",
+    "instance_name": "autoscale-vm",
+    "machine_type": "e2-medium"
+  },
+  "vm": {
+    "name": "alpine-autoscale",
+    "ram_mb": 1024,
+    "cpus": 2,
+    "disk_mb": 8192,
+    "ssh_port": 2222
+  },
+  "application": {
+    "port": 8080,
+    "host": "0.0.0.0"
+  }
+}
