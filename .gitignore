@@ -14,6 +14,13 @@ docs/*.toc
 logs/
 config/monitor_state.json
 
+# Manim render output (partial files, cache)
+media/
+
+# Animation source scripts (internal tooling)
+docs/cpu_scaling_demo.py
+docs/plot_simulation.py
+
 # Python cache
 __pycache__/
 *.pyc

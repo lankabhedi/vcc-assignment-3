@@ -341,21 +341,15 @@ python3 scripts/scale_to_gcp.py cost --machine-type e2-medium --hours 24
 
 ---
 
-## 📝 Deliverables Checklist
+## 📦 Deliverables
 
-- [x] **Document Report** - `docs/report.md`
-- [x] **Architecture Diagram** - `docs/architecture.svg`
-- [x] **Source Code Repository** - This repository
-- [ ] **Video Demo** - Record your demonstration
-
-### Video Demo Outline
-
-1. Show VirtualBox VM running Alpine Linux
-2. Demonstrate resource monitoring script
-3. Generate load to exceed 75% threshold
-4. Show auto-scaling trigger in logs
-5. Verify GCP instance creation
-6. Explain architecture and implementation
+| # | Deliverable | Link |
+|---|-------------|------|
+| 1 | **Document Report** (step-by-step implementation) | [docs/report.pdf](docs/report.pdf) |
+| 2 | **Architecture Diagram** (local VM → monitor → GCP) | [docs/architecture.svg](docs/architecture.svg) |
+| 3 | **Source Code Repository** (scripts, app, configs) | [github.com/lankabhedi/vcc-assignment-3](https://github.com/lankabhedi/vcc-assignment-3) |
+| 4 | **Video Demo** (auto-scaling simulation) | [docs/demo_video.mp4](docs/demo_video.mp4) |
+| 5 | **Plagiarism Declaration** | [docs/plagiarism_declaration.md](docs/plagiarism_declaration.md) |
 
 ---
 
