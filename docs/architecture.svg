@@ -1,154 +1,160 @@
-<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1000 710" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1000" height="700" fill="#f8f9fa"/>
-  
+  <rect width="1000" height="710" fill="#f8f9fa"/>
+
   <!-- Title -->
-  <text x="500" y="40" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#333">
+  <text x="500" y="38" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#333">
     Auto-Scaling Architecture: Local VM to GCP Cloud
   </text>
-  <text x="500" y="65" text-anchor="middle" font-family="Arial" font-size="14" fill="#666">
-    Samnit Mehandiratta (M25AI2087), IIT Jodhpur - VCC Assignment 3
+  <text x="500" y="60" text-anchor="middle" font-family="Arial" font-size="13" fill="#666">
+    Samnit Mehandiratta (M25AI2087), IIT Jodhpur — VCC Assignment 3
   </text>
-  
-  <!-- Local VM Section -->
-  <rect x="50" y="100" width="350" height="380" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
-  <text x="225" y="130" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1976d2">
-    Local VM (VirtualBox)
+
+  <!-- ── Local VM Section ── -->
+  <rect x="50" y="85" width="350" height="400" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+  <text x="225" y="112" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#1976d2">
+    Local VM (QEMU/KVM)
   </text>
-  
+
   <!-- Alpine Linux Box -->
-  <rect x="80" y="150" width="290" height="80" fill="#ffffff" stroke="#42a5f5" stroke-width="2" rx="5"/>
-  <text x="225" y="175" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Alpine Linux</text>
-  <text x="225" y="195" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Lightweight OS (~60MB)</text>
-  <text x="225" y="215" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Python3, SSH enabled</text>
-  
+  <rect x="80" y="125" width="290" height="75" fill="#ffffff" stroke="#42a5f5" stroke-width="2" rx="5"/>
+  <text x="225" y="148" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Alpine Linux 3.23</text>
+  <text x="225" y="167" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Lightweight OS (~60 MB)</text>
+  <text x="225" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Python 3, SSH enabled</text>
+
   <!-- Sample App Box -->
-  <rect x="80" y="250" width="290" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
-  <text x="225" y="275" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Sample Web Server</text>
-  <text x="225" y="295" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Port 8080, /health endpoint</text>
-  
+  <rect x="80" y="218" width="290" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="225" y="243" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Sample Web Server</text>
+  <text x="225" y="263" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Port 8080 · /health endpoint</text>
+
   <!-- Monitor Box -->
-  <rect x="80" y="330" width="290" height="60" fill="#fce4ec" stroke="#e91e63" stroke-width="2" rx="5"/>
-  <text x="225" y="355" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Resource Monitor</text>
-  <text x="225" y="375" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">CPU/RAM check every 5s</text>
-  
+  <rect x="80" y="296" width="290" height="60" fill="#fce4ec" stroke="#e91e63" stroke-width="2" rx="5"/>
+  <text x="225" y="321" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Resource Monitor</text>
+  <text x="225" y="341" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">CPU/RAM check every 5 s</text>
+
   <!-- Threshold Box -->
-  <rect x="80" y="410" width="290" height="50" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="5"/>
-  <text x="225" y="430" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">
+  <rect x="80" y="374" width="290" height="85" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="5"/>
+  <text x="225" y="400" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">
     Threshold: CPU/RAM &gt; 75%
   </text>
-  <text x="225" y="450" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">
-    3 consecutive triggers required
+  <text x="225" y="420" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">
+    3 consecutive checks required
   </text>
-  
-  <!-- GCP Cloud Section -->
-  <rect x="600" y="100" width="350" height="380" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="10"/>
-  <text x="775" y="130" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2e7d32">
+  <text x="225" y="438" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">
+    5-min cooldown after trigger
+  </text>
+  <text x="225" y="452" text-anchor="middle" font-family="Arial" font-size="11" font-style="italic" fill="#c62828">
+    → triggers GCP scale-out
+  </text>
+
+  <!-- ── GCP Section ── -->
+  <rect x="600" y="85" width="350" height="400" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="10"/>
+  <text x="775" y="112" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#2e7d32">
     Google Cloud Platform
   </text>
-  
-  <!-- GCP Auth Box -->
-  <rect x="630" y="150" width="290" height="50" fill="#ffffff" stroke="#4caf50" stroke-width="2" rx="5"/>
-  <text x="775" y="170" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#333">gcloud CLI / API</text>
-  <text x="775" y="190" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">Authentication &amp; Project Config</text>
-  
+
+  <!-- gcloud CLI Box -->
+  <rect x="630" y="125" width="290" height="60" fill="#ffffff" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="775" y="150" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">gcloud CLI / API</text>
+  <text x="775" y="170" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Authentication &amp; project config</text>
+
   <!-- Compute Engine Box -->
-  <rect x="630" y="220" width="290" height="80" fill="#ffffff" stroke="#4caf50" stroke-width="2" rx="5"/>
-  <text x="775" y="245" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Compute Engine VM</text>
-  <text x="775" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">e2-medium instance</text>
-  <text x="775" y="285" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Debian 11, Auto-assigned IP</text>
-  
+  <rect x="630" y="203" width="290" height="80" fill="#ffffff" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="775" y="228" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Compute Engine VM</text>
+  <text x="775" y="248" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">e2-medium · Debian 11</text>
+  <text x="775" y="268" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Auto-assigned external IP</text>
+
   <!-- Instance Group Box -->
-  <rect x="630" y="320" width="290" height="70" fill="#f1f8e9" stroke="#689f38" stroke-width="2" rx="5"/>
-  <text x="775" y="345" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Managed Instance Group</text>
-  <text x="775" y="365" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Min: 1, Max: 5 instances</text>
-  <text x="775" y="380" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Auto-scaling policy: 75% CPU</text>
-  
-  <!-- Arrow from Local to GCP -->
+  <rect x="630" y="301" width="290" height="80" fill="#f1f8e9" stroke="#689f38" stroke-width="2" rx="5"/>
+  <text x="775" y="326" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Managed Instance Group</text>
+  <text x="775" y="346" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Min: 1 · Max: 5 instances</text>
+  <text x="775" y="366" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Auto-scaling policy: 75% CPU</text>
+
+  <!-- ── Arrow definitions ── -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#f57c00"/>
     </marker>
+    <marker id="arr-pink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e91e63"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff9800"/>
+    </marker>
   </defs>
-  
-  <!-- Scaling Trigger Arrow -->
-  <path d="M 400 290 L 450 290 L 450 290 L 600 290" 
-        stroke="#f57c00" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="500" y="275" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#f57c00">
-    SCALE TRIGGER
-  </text>
-  <text x="500" y="295" text-anchor="middle" font-family="Arial" font-size="10" fill="#f57c00">
-    (gcloud API call)
-  </text>
-  
-  <!-- Monitoring Flow Arrow (internal) -->
-  <path d="M 225 390 L 225 410" stroke="#e91e63" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-  
-  <!-- App to Monitor Arrow -->
-  <path d="M 225 310 L 225 330" stroke="#ff9800" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-  
-  <!-- Flow Steps at Bottom -->
+
+  <!-- App → Monitor (internal arrow) -->
+  <path d="M 225 278 L 225 296" stroke="#ff9800" stroke-width="2" fill="none" marker-end="url(#arr-amber)"/>
+
+  <!-- Monitor → Threshold (internal arrow) -->
+  <path d="M 225 356 L 225 374" stroke="#e91e63" stroke-width="2" fill="none" marker-end="url(#arr-pink)"/>
+
+  <!-- SCALE TRIGGER arrow: Threshold right-edge → gap → gcloud left-edge -->
+  <!-- Routes: (370,416) → right to (500,416) → up to (155) → right to (630,155) -->
+  <path d="M 370 416 L 500 416 L 500 155 L 630 155"
+        stroke="#f57c00" stroke-width="3" fill="none" marker-end="url(#arr-orange)"
+        stroke-dasharray="8,4"/>
+  <rect x="455" y="270" width="90" height="36" rx="4" fill="#fff8e1" stroke="#f57c00" stroke-width="1"/>
+  <text x="500" y="285" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#f57c00">SCALE</text>
+  <text x="500" y="299" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#f57c00">TRIGGER</text>
+
+  <!-- ── Implementation Flow ── -->
   <rect x="50" y="520" width="900" height="150" fill="#fff" stroke="#ddd" stroke-width="2" rx="10"/>
-  <text x="500" y="550" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#333">
+  <text x="500" y="548" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#333">
     Implementation Flow
   </text>
-  
-  <!-- Step 1 -->
-  <circle cx="120" cy="590" r="25" fill="#1976d2"/>
-  <text x="120" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">1</text>
-  <text x="120" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Create Local VM</text>
-  <text x="120" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(VirtualBox + Alpine)</text>
-  
-  <!-- Step 2 -->
-  <circle cx="280" cy="590" r="25" fill="#ff9800"/>
-  <text x="280" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">2</text>
-  <text x="280" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Deploy App</text>
-  <text x="280" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(Web Server)</text>
-  
-  <!-- Step 3 -->
-  <circle cx="440" cy="590" r="25" fill="#e91e63"/>
-  <text x="440" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">3</text>
-  <text x="440" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Monitor Resources</text>
-  <text x="440" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(CPU/RAM &gt;75%)</text>
-  
-  <!-- Step 4 -->
-  <circle cx="600" cy="590" r="25" fill="#4caf50"/>
-  <text x="600" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">4</text>
-  <text x="600" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Trigger Auto-Scale</text>
-  <text x="600" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(gcloud API)</text>
-  
-  <!-- Step 5 -->
-  <circle cx="760" cy="590" r="25" fill="#9c27b0"/>
-  <text x="760" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">5</text>
-  <text x="760" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Cloud VM Created</text>
-  <text x="760" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(GCP Compute)</text>
-  
-  <!-- Step 6 -->
-  <circle cx="920" cy="590" r="25" fill="#00bcd4"/>
-  <text x="920" y="595" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">6</text>
-  <text x="920" y="630" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Load Distributed</text>
-  <text x="920" y="645" text-anchor="middle" font-family="Arial" font-size="10" fill="#666">(Scaling Complete)</text>
-  
-  <!-- Connecting lines between steps -->
-  <line x1="145" y1="590" x2="255" y2="590" stroke="#ddd" stroke-width="2"/>
-  <line x1="305" y1="590" x2="415" y2="590" stroke="#ddd" stroke-width="2"/>
-  <line x1="465" y1="590" x2="575" y2="590" stroke="#ddd" stroke-width="2"/>
-  <line x1="625" y1="590" x2="735" y2="590" stroke="#ddd" stroke-width="2"/>
-  <line x1="785" y1="590" x2="895" y2="590" stroke="#ddd" stroke-width="2"/>
-  
-  <!-- Legend -->
-  <rect x="50" y="680" width="200" height="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
-  <text x="60" y="692" font-family="Arial" font-size="10" fill="#333">Local Components</text>
-  
-  <rect x="200" y="680" width="200" height="15" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="210" y="692" font-family="Arial" font-size="10" fill="#333">Cloud Components</text>
-  
-  <rect x="400" y="680" width="200" height="15" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
-  <text x="410" y="692" font-family="Arial" font-size="10" fill="#333">Application Layer</text>
-  
-  <rect x="600" y="680" width="200" height="15" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
-  <text x="610" y="692" font-family="Arial" font-size="10" fill="#333">Monitoring Layer</text>
-  
-  <rect x="800" y="680" width="150" height="15" fill="#ffebee" stroke="#f44336" stroke-width="1"/>
-  <text x="810" y="692" font-family="Arial" font-size="10" fill="#333">Threshold Alert</text>
+
+  <!-- Step circles -->
+  <circle cx="120" cy="588" r="22" fill="#1976d2"/>
+  <text x="120" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">1</text>
+  <text x="120" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Create Local VM</text>
+  <text x="120" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(QEMU + Alpine)</text>
+
+  <circle cx="280" cy="588" r="22" fill="#ff9800"/>
+  <text x="280" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">2</text>
+  <text x="280" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Deploy App</text>
+  <text x="280" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(Web Server)</text>
+
+  <circle cx="440" cy="588" r="22" fill="#e91e63"/>
+  <text x="440" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">3</text>
+  <text x="440" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Monitor Resources</text>
+  <text x="440" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(CPU/RAM &gt;75%)</text>
+
+  <circle cx="600" cy="588" r="22" fill="#4caf50"/>
+  <text x="600" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">4</text>
+  <text x="600" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Trigger Auto-Scale</text>
+  <text x="600" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(gcloud API)</text>
+
+  <circle cx="760" cy="588" r="22" fill="#9c27b0"/>
+  <text x="760" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">5</text>
+  <text x="760" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cloud VM Created</text>
+  <text x="760" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(GCP Compute)</text>
+
+  <circle cx="920" cy="588" r="22" fill="#00bcd4"/>
+  <text x="920" y="593" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">6</text>
+  <text x="920" y="624" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Load Distributed</text>
+  <text x="920" y="638" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">(Scaling Complete)</text>
+
+  <!-- Step connector lines -->
+  <line x1="142" y1="588" x2="258" y2="588" stroke="#ddd" stroke-width="2"/>
+  <line x1="302" y1="588" x2="418" y2="588" stroke="#ddd" stroke-width="2"/>
+  <line x1="462" y1="588" x2="578" y2="588" stroke="#ddd" stroke-width="2"/>
+  <line x1="622" y1="588" x2="738" y2="588" stroke="#ddd" stroke-width="2"/>
+  <line x1="782" y1="588" x2="898" y2="588" stroke="#ddd" stroke-width="2"/>
+
+  <!-- ── Legend (evenly spaced, no overlap) ── -->
+  <rect x="20"  y="682" width="175" height="16" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
+  <text x="30"  y="694" font-family="Arial" font-size="10" fill="#333">Local Components</text>
+
+  <rect x="205" y="682" width="175" height="16" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="215" y="694" font-family="Arial" font-size="10" fill="#333">Cloud Components</text>
+
+  <rect x="390" y="682" width="175" height="16" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="400" y="694" font-family="Arial" font-size="10" fill="#333">Application Layer</text>
+
+  <rect x="575" y="682" width="175" height="16" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+  <text x="585" y="694" font-family="Arial" font-size="10" fill="#333">Monitoring Layer</text>
+
+  <rect x="760" y="682" width="175" height="16" fill="#ffebee" stroke="#f44336" stroke-width="1"/>
+  <text x="770" y="694" font-family="Arial" font-size="10" fill="#333">Threshold Alert</text>
 </svg>
